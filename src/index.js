@@ -24,10 +24,12 @@ const iterate = () => {
   tasks.sort((a, b) => a.index - b.index);
   tasks.forEach((item) => {
     const li = document.createElement('li');
+    li.className = 'ul-li';
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = 'completed';
     checkbox.name = 'completed';
+    checkbox.className = 'checkbox';
 
     const description = document.createElement('p');
     description.className = 'description';

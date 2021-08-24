@@ -3,10 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpack boiler</title>
+    <title>DoTask</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <h1>To do list</h1>
-    <ul class="lists"></ul>
+    <div class="container">
+      <ul>
+        <li><p class="header">DoTask</p></li>
+        <li>
+          <form>
+            <input placeholder="Add a new task ... " />
+            <button class="icn-btn" type="button">
+              <i class="far fa-plus-square"></i>
+            </button>
+          </form>
+        </li>
+      </ul>
+      <ul class="lists"></ul>
+      <button type="button" class="clear-btn">Clear all completed</button>
+    </div>
   </body>
 </html>
