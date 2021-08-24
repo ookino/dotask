@@ -21,6 +21,7 @@ const tasks = [
 ];
 
 const iterate = () => {
+  tasks.sort((a, b) => a.index - b.index);
   tasks.forEach((item) => {
     const li = document.createElement('li');
     const checkbox = document.createElement('input');
