@@ -1,2 +1,4 @@
-# webpack-sass-boilerplate
- weback with sass boilerplate configured with HTML,CSS and Javascript linters and github  linters workflow  
+# DoTask
+"DoTask" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. 
+
+
