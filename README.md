@@ -4,13 +4,26 @@
 
 > "DoTask" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
+<br>
+
+![](./assets/images/screenshot.png)
+
+<br>
+
 **Additional description about the project and its features.**
 
 ## ⚒️ Built With
 
+`Languages`
+
 - HTML
 - CSS
 - Javascript
+
+`Frameworks`
+
+- SASS
+- Webpack
 
 ## 📡 Live Demo
 
@@ -21,21 +34,46 @@
 The following tools help make it easier to run this code.
 
 - [Visual Studio Code](https://code.visualstudio.com/): A source code editor
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): A simple web server utility for Visual Studio Code
 - [git](https://git-scm.com/downloads): A tool for managing source code
 
 ## 🔥 Getting Started
 
-If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
+### **Prerequisites**
+
+To run this project you need [Node](https://nodejs.org/en/) and [NPM](https://docs.npmjs.com/about-npm-versions) installed on your local machine
+<br>
+`Note` : When you install Node.js, npm is automatically installed, However, npm is released more frequently than Node.js
+
+### **Setup**
+
+If you have installed git you can clone the code to your machine, or download a ZIP of all the files directly.
 [Download the ZIP from this location](https://github.com/yaseerokino/dotask/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
 
 ```bash
 git clone https://github.com/yaseerokino/dotask.git
 ```
 
-- Once the files are downloaded or cloned on your machine, open the "dotask" folder in [Visual Studio Code(VSCode)](https://code.visualstudio.com/)
-- With the files open in VS Code, click the **Go Live** button at the bottom of the VSCode window to launch the files with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
-- Optionally you can simply open the index.html file located in the "dotask" folder with your preferred browser
+### **Install**
+
+Once the files are downloaded or cloned on your machine, open your terminal and ` "cd to dotask folder"` and run the following commands:
+
+**To install all dependencies**
+
+```bash
+npm install
+```
+
+**To build and configure webpack**
+
+```bash
+npm run build
+```
+
+**To start development server**
+
+```bash
+npm run start
+```
 
 ## 🙎🏾‍♂️ Author
 

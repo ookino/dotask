@@ -11,6 +11,7 @@ yarn-error.log*
 # .prettierignore
 # .stylelintrc.json
 # .eslintrc.json
+.gitattributes
 
 # Runtime data
 pids
