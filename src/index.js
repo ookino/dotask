@@ -4,7 +4,7 @@ import completed from './module/completed';
 
 const listContainer = document.querySelector('.lists');
 
-const tasks = [
+let tasks = [
   {
     description: 'Go to school',
     completed: false,
@@ -21,6 +21,11 @@ const tasks = [
     index: 1,
   },
 ];
+
+tasks =
+  localStorage.getItem('tasks') !== null
+    ? JSON.parse(localStorage.getItem('tasks'))
+    : tasks;
 
 const iterate = () => {
   tasks.sort((a, b) => a.index - b.index);
@@ -42,9 +47,8 @@ const iterate = () => {
       checkbox.checked = false;
     }
     checkbox.addEventListener('change', (event) => {
-      const updated = completed(item.index, tasks, event);
-      localStorage.setItem('tasks', JSON.stringify(updated));
-      console.log(localStorage);
+      completed(item.index, item, event, description);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
     });
     li.appendChild(checkbox);
     li.appendChild(description);
