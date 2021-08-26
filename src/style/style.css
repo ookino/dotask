@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +51,6 @@ input:focus {
   color: #414141;
   transition: all 0.4s ease 0s;
 }
-
 .icn-btn:hover {
   font-size: 25px;
   transition: all 0.4s ease 0s;
@@ -64,25 +62,31 @@ input:focus {
 }
 
 .container {
-  width: 30%;
+  width: 100%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.18), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
 }
-
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 30%;
+  }
+}
 .container .lists {
   display: flex;
   flex-direction: column;
 }
-
 .container .ul-li {
   display: flex;
   align-items: center;
 }
-
 .container .ul-li .checkbox {
   margin-right: 20px;
 }
-
 .container .clear-btn {
   width: 100%;
   padding: 15px;
@@ -90,7 +94,6 @@ input:focus {
   border: none;
   transition: all 0.4s ease 0s;
 }
-
 .container .clear-btn:hover {
   text-decoration: underline;
-}
+}/*# sourceMappingURL=style.css.map */

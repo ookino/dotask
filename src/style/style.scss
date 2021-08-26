@@ -64,9 +64,17 @@ input:focus {
 }
 
 .container {
-  width: 30%;
+  width: 100%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.18), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
 
   .lists {
     display: flex;
