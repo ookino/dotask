@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ body {
 }
 
 button {
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 ul {
@@ -38,7 +38,7 @@ form {
 input {
   border: none;
   font-style: italic;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 input:focus {
@@ -64,9 +64,21 @@ input:focus {
 }
 
 .container {
-  width: 30%;
+  width: 100%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.18), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 30%;
+  }
 }
 
 .container .lists {
@@ -83,6 +95,10 @@ input:focus {
 .container .ul-li div {
   display: flex;
   align-items: center;
+}
+
+.container .ul-li .checkbox {
+  margin-right: 20px;
 }
 
 .container .ul-li div .checkbox {
