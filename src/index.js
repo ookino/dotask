@@ -1,12 +1,13 @@
 import './style/style.css';
 
-import { addTask, editTask, removeTask } from './module/task';
+import { addTask, clearCompleted, editTask, removeTask } from './module/task';
 
 import completed from './module/completed';
 
 const listContainer = document.querySelector('.lists');
 const add = document.getElementById('add-btn');
 const input = document.getElementById('new-task');
+const clear = document.getElementById('clear-btn');
 let inputtedTask;
 
 const tasks =
@@ -83,4 +84,8 @@ add.addEventListener('click', () => {
   } else {
     alert('Input a task description');
   }
+});
+
+clear.addEventListener('click', () => {
+  clearCompleted(tasks);
 });

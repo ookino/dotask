@@ -18,3 +18,9 @@ export function editTask(task, tasks) {
   });
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
+export function clearCompleted(tasks) {
+  const removeCompleted = tasks.filter((item) => item.completed !== true);
+  localStorage.setItem('tasks', JSON.stringify(removeCompleted));
+  window.location.reload();
+}
