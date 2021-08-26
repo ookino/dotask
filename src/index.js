@@ -16,7 +16,7 @@ const tasks =
 
 const iterate = () => {
   console.log(inputtedTask);
-  tasks.sort((a, b) => a.index - b.index);
+  tasks.sort((a, b) => b.index - a.index);
   tasks.forEach((item) => {
     const li = document.createElement('li');
     li.className = 'ul-li';
@@ -27,7 +27,7 @@ const iterate = () => {
     checkbox.className = 'checkbox';
     const description = document.createElement('p');
     description.className = 'description';
-    description.innerHTML = `${item.description}`;
+    description.innerText = `${item.description}`;
     if (item.completed === true) {
       checkbox.checked = true;
       description.style.textDecoration = 'line-through solid';
@@ -37,6 +37,13 @@ const iterate = () => {
     checkbox.addEventListener('change', (event) => {
       completed(item.index, item, event, description);
       localStorage.setItem('tasks', JSON.stringify(tasks));
+    });
+    description.addEventListener('click', () => {
+      description.setAttribute('contenteditable', 'true');
+      description.addEventListener('input', () => {
+        item.description = description.innerText;
+        editTask(item, tasks);
+      });
     });
     li.appendChild(checkbox);
     li.appendChild(description);

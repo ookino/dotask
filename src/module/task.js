@@ -6,4 +6,11 @@ export function addTask(tasks, description) {
 
 export function removeTask() {}
 
-export function editTask() {}
+export function editTask(task, tasks) {
+  tasks.forEach((item) => {
+    if (item.index === task.index) {
+      item.description = task.description;
+    }
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
