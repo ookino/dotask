@@ -30,12 +30,11 @@ const iterate = () => {
     checkbox.id = 'completed';
     checkbox.name = 'completed';
     checkbox.className = 'checkbox';
-
     const description = document.createElement('p');
     description.className = 'description';
     description.innerHTML = `${item.description}`;
-
-    li.innerHTML = checkbox.outerHTML + description.outerHTML;
+    li.appendChild(checkbox);
+    li.appendChild(description);
     listContainer.appendChild(li);
   });
 };
