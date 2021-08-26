@@ -4,27 +4,10 @@ import completed from './module/completed';
 
 const listContainer = document.querySelector('.lists');
 
-let tasks = [
-  {
-    description: 'Go to school',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Buy groceries',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Do chores',
-    completed: false,
-    index: 1,
-  },
-];
-
-tasks = localStorage.getItem('tasks') !== null
-  ? JSON.parse(localStorage.getItem('tasks'))
-  : tasks;
+const tasks =
+  localStorage.getItem('tasks') !== null
+    ? JSON.parse(localStorage.getItem('tasks'))
+    : [];
 
 const iterate = () => {
   tasks.sort((a, b) => a.index - b.index);
