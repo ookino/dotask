@@ -84,9 +84,28 @@ input:focus {
   .ul-li {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    .checkbox {
-      margin-right: 20px;
+    div {
+      display: flex;
+      align-items: center;
+
+      .checkbox {
+        margin-right: 20px;
+      }
+    }
+
+    .del-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      align-self: flex-end;
+      justify-self: flex-end;
+
+      &:hover {
+        color: lightcoral;
+      }
     }
   }
 
@@ -99,6 +118,7 @@ input:focus {
 
     &:hover {
       text-decoration: underline;
+      color: lightcoral;
     }
   }
 }

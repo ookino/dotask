@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ body {
 }
 
 button {
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 ul {
@@ -38,7 +38,7 @@ form {
 input {
   border: none;
   font-style: italic;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 input:focus {
@@ -89,10 +89,33 @@ input:focus {
 .container .ul-li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.container .ul-li div {
+  display: flex;
+  align-items: center;
 }
 
 .container .ul-li .checkbox {
   margin-right: 20px;
+}
+
+.container .ul-li div .checkbox {
+  margin-right: 20px;
+}
+
+.container .ul-li .del-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.container .ul-li .del-btn:hover {
+  color: lightcoral;
 }
 
 .container .clear-btn {
@@ -105,4 +128,5 @@ input:focus {
 
 .container .clear-btn:hover {
   text-decoration: underline;
+  color: lightcoral;
 }
