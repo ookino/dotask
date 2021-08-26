@@ -6,7 +6,7 @@
 
 <br>
 
-![](./assets/images/screenshot.png)
+![](./assets/gifs/interactive.gif)
 
 <br>
 
@@ -27,7 +27,7 @@
 
 ## 📡 Live Demo
 
-[Link to Live Demo](https://yaseerokino.github.io/dotask/)
+[Link to Live Demo](https://dotask-webpack.netlify.app/)
 
 ## 🧰 Tools
 
