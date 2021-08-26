@@ -20,6 +20,7 @@ const iterate = () => {
   tasks.forEach((item) => {
     const li = document.createElement('li');
     li.className = 'ul-li';
+    const div = document.createElement('div');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = 'completed';
@@ -28,6 +29,10 @@ const iterate = () => {
     const description = document.createElement('p');
     description.className = 'description';
     description.innerText = `${item.description}`;
+    const deleteIcon = document.createElement('button');
+    deleteIcon.className = 'del-btn';
+    deleteIcon.type = 'button';
+    deleteIcon.innerHTML = '<i class="far fa-trash-alt"></i>';
     if (item.completed === true) {
       checkbox.checked = true;
       description.style.textDecoration = 'line-through solid';
@@ -45,8 +50,19 @@ const iterate = () => {
         editTask(item, tasks);
       });
     });
-    li.appendChild(checkbox);
-    li.appendChild(description);
+    li.addEventListener('mouseover', () => {
+      deleteIcon.style.display = 'block';
+    });
+    li.addEventListener('mouseleave', () => {
+      deleteIcon.style.display = 'none';
+    });
+    deleteIcon.addEventListener('click', () => {
+      removeTask(item.index, tasks);
+    });
+    div.appendChild(checkbox);
+    div.appendChild(description);
+    li.appendChild(div);
+    li.appendChild(deleteIcon);
     listContainer.appendChild(li);
   });
 };

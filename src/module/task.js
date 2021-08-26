@@ -4,7 +4,11 @@ export function addTask(tasks, description) {
   return newTask;
 }
 
-export function removeTask() {}
+export function removeTask(index, tasks) {
+  const remove = tasks.filter((item) => item.index !== index);
+  localStorage.setItem('tasks', JSON.stringify(remove));
+  window.location.reload();
+}
 
 export function editTask(task, tasks) {
   tasks.forEach((item) => {
