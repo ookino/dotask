@@ -1,8 +1,13 @@
 import './style/style.css';
 
+import { addTask, editTask, removeTask } from './module/task';
+
 import completed from './module/completed';
 
 const listContainer = document.querySelector('.lists');
+const add = document.getElementById('add-btn');
+const input = document.getElementById('new-task');
+let inputtedTask;
 
 const tasks =
   localStorage.getItem('tasks') !== null
@@ -10,6 +15,7 @@ const tasks =
     : [];
 
 const iterate = () => {
+  console.log(inputtedTask);
   tasks.sort((a, b) => a.index - b.index);
   tasks.forEach((item) => {
     const li = document.createElement('li');
@@ -39,3 +45,19 @@ const iterate = () => {
 };
 
 window.addEventListener('load', iterate);
+input.addEventListener('input', (e) => {
+  inputtedTask = e.target.value;
+  console.log(inputtedTask);
+});
+
+add.addEventListener('click', () => {
+  if (inputtedTask !== undefined) {
+    console.log(inputtedTask);
+    const newTask = addTask(tasks, inputtedTask);
+    tasks.push(newTask);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    window.location.reload();
+  } else {
+    alert('Input a task description');
+  }
+});
