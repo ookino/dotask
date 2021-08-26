@@ -1,5 +1,7 @@
 export function addTask(tasks, description) {
-  const id = tasks.length + 1;
+  const rand = Math.max(...tasks.map((item) => item.index), 1);
+  const id = rand + 1;
+  console.log(id);
   const newTask = { description, completed: false, index: id };
   return newTask;
 }
