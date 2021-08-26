@@ -83,10 +83,37 @@ input:focus {
 .container .ul-li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
+.container .ul-li div {
+  display: flex;
+  align-items: center;
+}
+
 .container .ul-li .checkbox {
   margin-right: 20px;
 }
+
+
+.container .ul-li div .checkbox {
+  margin-right: 20px;
+}
+
+.container .ul-li .del-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.container .ul-li .del-btn:hover {
+  color: lightcoral;
+}
+
+
 .container .clear-btn {
   width: 100%;
   padding: 15px;
@@ -96,4 +123,9 @@ input:focus {
 }
 .container .clear-btn:hover {
   text-decoration: underline;
+
 }/*# sourceMappingURL=style.css.map */
+
+  color: lightcoral;
+}
+
