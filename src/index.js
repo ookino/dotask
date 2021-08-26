@@ -1,5 +1,7 @@
 import './style/style.css';
 
+import completed from './module/completed';
+
 const listContainer = document.querySelector('.lists');
 
 const tasks = [
@@ -33,6 +35,17 @@ const iterate = () => {
     const description = document.createElement('p');
     description.className = 'description';
     description.innerHTML = `${item.description}`;
+    if (item.completed === true) {
+      checkbox.checked = true;
+      description.style.textDecoration = 'line-through solid';
+    } else {
+      checkbox.checked = false;
+    }
+    checkbox.addEventListener('change', (event) => {
+      const updated = completed(item.index, tasks, event);
+      localStorage.setItem('tasks', JSON.stringify(updated));
+      console.log(localStorage);
+    });
     li.appendChild(checkbox);
     li.appendChild(description);
     listContainer.appendChild(li);
