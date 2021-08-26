@@ -6,7 +6,7 @@
 
 <br>
 
-![](./assets/images/screenshot.png)
+![](./assets/gifs/interactive.gif)
 
 <br>
 
