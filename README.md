@@ -27,7 +27,7 @@
 
 ## 📡 Live Demo
 
-[Link to Live Demo](https://yaseerokino.github.io/dotask/)
+[Link to Live Demo](https://dotask-webpack.netlify.app/)
 
 ## 🧰 Tools
 
