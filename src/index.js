@@ -22,10 +22,9 @@ let tasks = [
   },
 ];
 
-tasks =
-  localStorage.getItem('tasks') !== null
-    ? JSON.parse(localStorage.getItem('tasks'))
-    : tasks;
+tasks = localStorage.getItem('tasks') !== null
+  ? JSON.parse(localStorage.getItem('tasks'))
+  : tasks;
 
 const iterate = () => {
   tasks.sort((a, b) => a.index - b.index);
