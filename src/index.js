@@ -1,6 +1,8 @@
 import './style/style.css';
 
-import { addTask, clearCompleted, editTask, removeTask } from './module/task';
+import {
+  addTask, clearCompleted, editTask, removeTask,
+} from './module/task';
 
 import completed from './module/completed';
 
@@ -10,13 +12,11 @@ const input = document.getElementById('new-task');
 const clear = document.getElementById('clear-btn');
 let inputtedTask;
 
-const tasks =
-  localStorage.getItem('tasks') !== null
-    ? JSON.parse(localStorage.getItem('tasks'))
-    : [];
+const tasks = localStorage.getItem('tasks') !== null
+  ? JSON.parse(localStorage.getItem('tasks'))
+  : [];
 
 const iterate = () => {
-  console.log(inputtedTask);
   tasks.sort((a, b) => b.index - a.index);
   tasks.forEach((item) => {
     const li = document.createElement('li');
@@ -71,17 +71,16 @@ const iterate = () => {
 window.addEventListener('load', iterate);
 input.addEventListener('input', (e) => {
   inputtedTask = e.target.value;
-  console.log(inputtedTask);
 });
 
 add.addEventListener('click', () => {
   if (inputtedTask !== undefined) {
-    console.log(inputtedTask);
     const newTask = addTask(tasks, inputtedTask);
     tasks.push(newTask);
     localStorage.setItem('tasks', JSON.stringify(tasks));
     window.location.reload();
   } else {
+    // eslint-disable-next-line no-alert
     alert('Input a task description');
   }
 });
