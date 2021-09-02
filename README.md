@@ -75,6 +75,14 @@ npm run build
 npm run start
 ```
 
+### **Test**
+
+Once all the dependencies have been installed and webpack has been built and configured successfully run the following commands:
+
+```bash
+npm test
+```
+
 ## 🙎🏾‍♂️ Author
 
 - GitHub: [@yaseerokino](https://github.com/yaseerokino)

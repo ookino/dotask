@@ -12,6 +12,7 @@ yarn-error.log*
 # .stylelintrc.json
 # .eslintrc.json
 .gitattributes
+.DS_Store
 
 # Runtime data
 pids
