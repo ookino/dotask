@@ -6,12 +6,11 @@ import completed from '../__mocks__/completed';
 
 jest.mock('../module/storage.js');
 
-let tasks = [
-  { description: 'do some coding', completed: false, index: 1 },
-  { description: 'hire a help', completed: true, index: 2 },
-];
-
 describe('Add Tasks', () => {
+  const tasks = [
+    { description: 'do some coding', completed: false, index: 1 },
+    { description: 'hire a help', completed: true, index: 2 },
+  ];
   it('add new task', () => {
     tasks.push(addTask(tasks, 'learn another language'));
     expect(tasks[2]).toEqual({
@@ -27,14 +26,33 @@ describe('Add Tasks', () => {
 });
 
 describe('Remove Task', () => {
+  let tasks = [
+    { description: 'do some coding', completed: false, index: 1 },
+    { description: 'hire a help', completed: true, index: 2 },
+    { description: 'The final task', completed: true, index: 3 },
+  ];
   it('Remove single task', () => {
     expect(tasks.length).toBe(3);
     tasks = removeTask(2, tasks);
     expect(tasks.length).toBe(2);
   });
+
+  // it('check function for updating  items index value upon item removal', () => {
+  //   tasks = removeTask(2, tasks);
+  //   expect();
+  // });
 });
 
 describe('Edit Task', () => {
+  const tasks = [
+    { description: 'do some coding', completed: false, index: 1 },
+    { description: 'hire a help', completed: true, index: 2 },
+    {
+      description: 'learn another language',
+      completed: false,
+      index: 3,
+    },
+  ];
   it('Edit task description', () => {
     const update = {
       description: 'edit do some coding task',
@@ -47,6 +65,7 @@ describe('Edit Task', () => {
         completed: false,
         index: 1,
       },
+      { description: 'hire a help', completed: true, index: 2 },
       {
         description: 'learn another language',
         completed: false,

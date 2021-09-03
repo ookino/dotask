@@ -13,7 +13,14 @@ export function addTask(tasks, description) {
 
 export function removeTask(index, tasks) {
   const remove = tasks.filter((item) => item.index !== index);
-
+  if (remove.length > 0) {
+    let counter = 1;
+    remove.forEach((element) => {
+      element.index = counter;
+      counter += 1;
+    });
+  }
+  setStorage(remove);
   return remove;
 }
 
