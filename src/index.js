@@ -59,6 +59,7 @@ const iterate = () => {
     });
     deleteIcon.addEventListener('click', () => {
       removeTask(item.index, tasks);
+      window.location.reload();
     });
     div.appendChild(checkbox);
     div.appendChild(description);

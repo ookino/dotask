@@ -1,14 +1,20 @@
-export function addTask(tasks, description) {
+import setStorage from './storage';
+
+const randIndex = (tasks) => {
   const rand = Math.max(...tasks.map((item) => item.index), 1);
   const id = rand + 1;
-  const newTask = { description, completed: false, index: id };
+  return id;
+};
+
+export function addTask(tasks, description) {
+  const newTask = { description, completed: false, index: randIndex(tasks) };
   return newTask;
 }
 
 export function removeTask(index, tasks) {
   const remove = tasks.filter((item) => item.index !== index);
-  localStorage.setItem('tasks', JSON.stringify(remove));
-  window.location.reload();
+  setStorage(remove);
+  return remove;
 }
 
 export function editTask(task, tasks) {
