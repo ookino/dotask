@@ -36,11 +36,10 @@ describe('Remove Task', () => {
     tasks = removeTask(2, tasks);
     expect(tasks.length).toBe(2);
   });
-
-  // it('check function for updating  items index value upon item removal', () => {
-  //   tasks = removeTask(2, tasks);
-  //   expect();
-  // });
+  // update index on task deletion;
+  it('check function for updating  items index value upon item removal', () => {
+    expect(tasks[1].index).toBe(2);
+  });
 });
 
 describe('Edit Task', () => {
