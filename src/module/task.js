@@ -13,6 +13,13 @@ export function addTask(tasks, description) {
 
 export function removeTask(index, tasks) {
   const remove = tasks.filter((item) => item.index !== index);
+  if (remove.length > 0) {
+    let counter = 1;
+    remove.forEach((element) => {
+      element.index = counter;
+      counter += 1;
+    });
+  }
   setStorage(remove);
   return remove;
 }
@@ -23,11 +30,12 @@ export function editTask(task, tasks) {
       item.description = task.description;
     }
   });
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  setStorage(tasks);
+  return tasks;
 }
 
 export function clearCompleted(tasks) {
   const removeCompleted = tasks.filter((item) => item.completed !== true);
-  localStorage.setItem('tasks', JSON.stringify(removeCompleted));
-  window.location.reload();
+  setStorage(removeCompleted);
+  return removeCompleted;
 }

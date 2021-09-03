@@ -1,7 +1,7 @@
 let items = [];
-const setStorage = (tasks) => {
+export const setStorage = (tasks) => {
   items = tasks;
   return items;
 };
 
-export default setStorage;
+export const getStorage = () => items;
