@@ -88,4 +88,5 @@ add.addEventListener('click', () => {
 
 clear.addEventListener('click', () => {
   clearCompleted(tasks);
+  window.location.reload();
 });
